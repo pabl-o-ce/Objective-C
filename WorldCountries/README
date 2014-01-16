@@ -1,0 +1,21 @@
+Project 7: Countries Expand your pin location
+
+The locations of the countries are in https://www.tripmondo.com/magazine/facts-and-statistics/list-of-capitals-and-countries/
+
+Individual Project
+
+Replicating Photomania application with world map of countries, their pins and flags.
+
+Download file BanderasMundo.zip
+Delivery Date : December 2 , 9 am .
+
+Using MapView , displays world map with a pin in each country , pressing the pin deplegamos its flag, with box, lodging enjoys country.
+
+You must load the list of countries and pins in a database . This should be done at program startup .
+In Ipad , when you deploy the image, a popover which allows displaying the name of the country and its coordinates appears .
+
+1) (25 % ) Load Database
+2) (25 % ) World map with pins located .
+3) (15 % ) by pressing the Display flag pin .
+4) (20 % ) Display box with the country
+5) (15 % ) and AlertView Button Deployment with location name and coordinates of the country.
