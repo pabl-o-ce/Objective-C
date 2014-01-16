@@ -1,0 +1,18 @@
+Project 3: Application drawing geometric figures 
+individual 
+
+1) Compile (10%) 
+
+2) Using a TabViewController (10%) 
+
+3) Tab1 = specifications of the figure (40%) 
+Figure: Square, triangle, circle 
+Background color 
+fill Color 
+Color Edge 
+
+Selection can be Button, Radio Group or segmented cell (see) 
+
+4) Tab2: Draw figure with specifications (20%) 
+
+5) Gesture, pinch in the figure, rises and falls. (20%)
