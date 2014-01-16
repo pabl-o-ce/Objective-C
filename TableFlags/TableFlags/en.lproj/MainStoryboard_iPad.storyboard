@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="8yZ-ia-XDc">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="tsX-kk-YBP">
+            <objects>
+                <viewController id="5Ki-eZ-sdp" customClass="imageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wu7-wt-U3L"/>
+                        <viewControllerLayoutGuide type="bottom" id="IHa-C4-hvv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cIZ-Ok-CFb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I7e-6r-Cbl">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAu-VH-vxT">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                        <items>
+                                            <barButtonItem width="3" style="plain" systemItem="fixedSpace" id="qbm-vR-BQm"/>
+                                            <barButtonItem title="Name of the Flag?" id="A7H-Fa-VOF">
+                                                <connections>
+                                                    <segue destination="sy8-8U-VmA" kind="popover" identifier="FlagCountry" popoverAnchorBarButtonItem="A7H-Fa-VOF" id="MUj-IX-dpQ">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem width="38" style="plain" systemItem="fixedSpace" id="N44-59-gSI"/>
+                                        </items>
+                                        <color key="tintColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </toolbar>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eAu-VH-vxT" firstAttribute="trailing" secondItem="I7e-6r-Cbl" secondAttribute="trailing" id="7od-Ra-Wi3"/>
+                                    <constraint firstAttribute="bottom" secondItem="eAu-VH-vxT" secondAttribute="bottom" constant="916" id="HmU-N6-ypp"/>
+                                    <constraint firstItem="eAu-VH-vxT" firstAttribute="top" secondItem="I7e-6r-Cbl" secondAttribute="top" id="pWA-Mi-Dg6"/>
+                                    <constraint firstItem="eAu-VH-vxT" firstAttribute="centerX" secondItem="I7e-6r-Cbl" secondAttribute="centerX" id="u4g-ER-acY"/>
+                                    <constraint firstItem="eAu-VH-vxT" firstAttribute="leading" secondItem="I7e-6r-Cbl" secondAttribute="leading" id="vHu-ci-fwo"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I7e-6r-Cbl" firstAttribute="trailing" secondItem="cIZ-Ok-CFb" secondAttribute="trailing" id="0bG-9F-RdR"/>
+                            <constraint firstItem="I7e-6r-Cbl" firstAttribute="bottom" secondItem="cIZ-Ok-CFb" secondAttribute="bottom" id="b6b-eJ-OMq"/>
+                            <constraint firstItem="I7e-6r-Cbl" firstAttribute="leading" secondItem="cIZ-Ok-CFb" secondAttribute="leading" id="c6i-ta-gyI"/>
+                            <constraint firstItem="I7e-6r-Cbl" firstAttribute="top" secondItem="cIZ-Ok-CFb" secondAttribute="top" id="i8O-Zn-OGE"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="h1u-J0-3EL"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="I7e-6r-Cbl" id="GQE-9c-BvR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZX-9f-ggR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="-1182"/>
+        </scene>
+        <!--Pop Info View Controller - Country Name-->
+        <scene sceneID="TrG-67-8p9">
+            <objects>
+                <viewController title="Country Name" id="sy8-8U-VmA" customClass="PopInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HFM-4z-wGZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DLP-be-wRC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TC4-j9-JMv">
+                        <rect key="frame" x="0.0" y="0.0" width="540" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" text="WhatsFlagCountry?" translatesAutoresizingMaskIntoConstraints="NO" id="X1R-s9-fiv">
+                                <rect key="frame" x="0.0" y="0.0" width="540" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X1R-s9-fiv" firstAttribute="bottom" secondItem="TC4-j9-JMv" secondAttribute="bottom" id="5QD-v9-vbW"/>
+                            <constraint firstItem="X1R-s9-fiv" firstAttribute="top" secondItem="TC4-j9-JMv" secondAttribute="top" id="IMC-b4-x0n"/>
+                            <constraint firstItem="X1R-s9-fiv" firstAttribute="leading" secondItem="TC4-j9-JMv" secondAttribute="leading" id="WkE-b5-piW"/>
+                            <constraint firstItem="X1R-s9-fiv" firstAttribute="trailing" secondItem="TC4-j9-JMv" secondAttribute="trailing" id="bHw-aI-Q4r"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="200" height="30"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="textView" destination="X1R-s9-fiv" id="xfw-hB-3AK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zb2-Vn-gkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2635" y="-1482"/>
+        </scene>
+        <!--Image FlagsTVC - Choose a Country-->
+        <scene sceneID="sEo-KK-7nk">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="Elk-Al-U5h" customClass="ImageFlagsTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NRX-YE-O2m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FlagRow" textLabel="Zqq-J8-qd6" imageView="1Fc-k6-Qq2" style="IBUITableViewCellStyleDefault" id="bV0-F8-vKX">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bV0-F8-vKX" id="vMm-wN-iWI">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zqq-J8-qd6">
+                                            <rect key="frame" x="95" y="0.0" width="190" height="43"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Ecuador.png" id="1Fc-k6-Qq2">
+                                            <rect key="frame" x="15" y="0.0" width="65" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5Ki-eZ-sdp" kind="replace" identifier="ShowFlag2" splitViewControllerTargetIndex="1" id="wuO-sG-JPM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Elk-Al-U5h" id="qDi-fW-Vhb"/>
+                            <outlet property="delegate" destination="Elk-Al-U5h" id="0fg-p5-HGj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Choose a Country" id="jKM-cA-3j8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgw-Az-HZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="-2082"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GJh-yh-ero">
+            <objects>
+                <navigationController id="M2h-bg-Z4L" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bnU-gT-rEZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Elk-Al-U5h" kind="relationship" relationship="rootViewController" id="iiF-gc-heV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukf-BI-Qkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544" y="-2082"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="Qbi-k8-aLk">
+            <objects>
+                <splitViewController id="8yZ-ia-XDc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <connections>
+                        <segue destination="M2h-bg-Z4L" kind="relationship" relationship="masterViewController" id="5tC-lY-7lU"/>
+                        <segue destination="5Ki-eZ-sdp" kind="relationship" relationship="detailViewController" id="zfe-dU-bEu"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5IZ-Ez-rR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="-1214"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ecuador.png" width="200" height="133"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="zfe-dU-bEu"/>
+    </inferredMetricsTieBreakers>
+</document>
