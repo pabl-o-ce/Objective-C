@@ -1,0 +1,31 @@
+Project 1:
+Individual Project
+
+Objective: To implement a project that plays tic- tac -toe between a player and the computer.
+The computer keeps track of the value of the bets.
+
+tasks :
+1) set of empty buttons Displays
+2) Players selected button , should deploy one brand .
+3) select Computer , display alternate brand.
+4) Check alternation
+5) After every move to determine status : win, lose
+6) If someone wins , report results , total count and reset option enabled .
+7) If there is no winner , disable reset option .
+8) Once you select a button , it should block .
+9) Computer must have some strategy.
+10) Compile and run
+
+
+Each Stage wins 10% provided that compile and run,
+To hide hidden controls consulting the property
+You can use icons decks as trademarks.
+
+
+Option 2 : 50 %
+
+1) Search on the Internet , make it work and correct reference (25 % )
+2) Presentation with explanation of the structure of the code should include UML class diagrams . ( 25 % )
+
+that is noughts and crosses :
+1) There is the field where an array
