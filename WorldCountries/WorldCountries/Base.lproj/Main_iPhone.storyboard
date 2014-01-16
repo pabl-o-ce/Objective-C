@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="X6p-hD-xLt">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="X7e-6d-fqf">
+            <objects>
+                <navigationController id="X6p-hD-xLt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOK-hf-dLU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wTH-ka-HjC" kind="relationship" relationship="rootViewController" id="oB8-Oq-1cV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnz-ur-h3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1254" y="-147"/>
+        </scene>
+        <!--World View Controller-->
+        <scene sceneID="rWj-db-P3X">
+            <objects>
+                <viewController id="wTH-ka-HjC" customClass="WorldViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Wc-bG-IdS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P71-yr-Upo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P71-yr-Upo" firstAttribute="top" secondItem="3Wc-bG-IdS" secondAttribute="top" type="default" id="6pg-2Z-3Sw"/>
+                            <constraint firstAttribute="bottom" secondItem="P71-yr-Upo" secondAttribute="bottom" type="default" id="LXX-sS-8Ay"/>
+                            <constraint firstAttribute="trailing" secondItem="P71-yr-Upo" secondAttribute="trailing" type="default" id="QtH-wA-TIV"/>
+                            <constraint firstItem="P71-yr-Upo" firstAttribute="leading" secondItem="3Wc-bG-IdS" secondAttribute="leading" type="default" id="R7A-lE-LeR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aaw-Cq-ubI">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="QGw-KC-mzd">
+                            <rect key="frame" x="6" y="6" width="307" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="America"/>
+                                <segment title="Europa"/>
+                                <segment title="Africa"/>
+                                <segment title="Asia"/>
+                                <segment title="Oceania"/>
+                            </segments>
+                            <connections>
+                                <action selector="chooseContinent:" destination="wTH-ka-HjC" eventType="valueChanged" id="Jo1-tG-qxV"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Choose" destination="QGw-KC-mzd" id="e28-0E-e3L"/>
+                        <outlet property="mapView" destination="P71-yr-Upo" id="9cC-09-2gP"/>
+                        <segue destination="K9r-Aj-DUt" kind="push" identifier="setLocal:" id="6KF-Tr-Fzr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dSn-s0-C5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-859" y="-144"/>
+        </scene>
+        <!--Flag View Controller-->
+        <scene sceneID="EoH-2k-YrA">
+            <objects>
+                <viewController id="K9r-Aj-DUt" customClass="FlagViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPS-sn-WuQ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sVB-Nu-6Da">
+                                <rect key="frame" x="194" y="5" width="120" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="lcO-Z7-Yfn" kind="embed" identifier="Embed Map of Country" id="1zP-IE-3ny"/>
+                                </connections>
+                            </containerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaP-gw-vnH">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FaP-gw-vnH" firstAttribute="leading" secondItem="kPS-sn-WuQ" secondAttribute="leading" type="default" id="5pY-F8-3dd"/>
+                            <constraint firstItem="sVB-Nu-6Da" firstAttribute="top" secondItem="kPS-sn-WuQ" secondAttribute="top" constant="5" id="FzU-9y-53X"/>
+                            <constraint firstAttribute="bottom" secondItem="sVB-Nu-6Da" secondAttribute="bottom" constant="388" id="YQA-12-zAQ"/>
+                            <constraint firstAttribute="bottom" secondItem="FaP-gw-vnH" secondAttribute="bottom" type="default" id="bNa-2f-qOn"/>
+                            <constraint firstAttribute="trailing" secondItem="sVB-Nu-6Da" secondAttribute="trailing" constant="6" id="lpp-aH-qc4"/>
+                            <constraint firstItem="FaP-gw-vnH" firstAttribute="top" secondItem="kPS-sn-WuQ" secondAttribute="top" type="default" id="seg-hn-eyr"/>
+                            <constraint firstItem="sVB-Nu-6Da" firstAttribute="leading" secondItem="kPS-sn-WuQ" secondAttribute="leading" constant="194" id="xqU-yO-udd"/>
+                            <constraint firstAttribute="trailing" secondItem="FaP-gw-vnH" secondAttribute="trailing" type="default" id="ycG-Oj-TWw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9f6-BA-NZq"/>
+                    <connections>
+                        <outlet property="scrollView" destination="FaP-gw-vnH" id="oav-PF-EXj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jkk-yq-vcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="-144"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="dAn-lL-j3v">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="lcO-Z7-Yfn" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qyJ-FF-53w">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="111"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dvM-n5-z9E">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="111"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dvM-n5-z9E" secondAttribute="bottom" type="default" id="4np-1v-QMo"/>
+                            <constraint firstAttribute="trailing" secondItem="dvM-n5-z9E" secondAttribute="trailing" type="default" id="B0x-Z0-KwR"/>
+                            <constraint firstItem="dvM-n5-z9E" firstAttribute="top" secondItem="qyJ-FF-53w" secondAttribute="top" type="default" id="Gwa-AG-HMx"/>
+                            <constraint firstItem="dvM-n5-z9E" firstAttribute="leading" secondItem="qyJ-FF-53w" secondAttribute="leading" type="default" id="zMc-d5-DeJ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="mapView" destination="dvM-n5-z9E" id="CjK-zX-oQ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dbG-BX-04m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="-94"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

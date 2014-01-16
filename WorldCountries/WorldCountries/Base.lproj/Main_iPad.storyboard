@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="ajf-yp-KJl">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--World View Controller-->
+        <scene sceneID="dOX-ik-MFt">
+            <objects>
+                <viewController id="uY8-pO-ylg" customClass="WorldViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N3r-mw-MvD">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-d8-fE8">
+                                <rect key="frame" x="0.0" y="1" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="960" id="9rd-6q-dpD"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7fg-d8-fE8" firstAttribute="leading" secondItem="N3r-mw-MvD" secondAttribute="leading" type="default" id="OlY-OU-CCr"/>
+                            <constraint firstItem="7fg-d8-fE8" firstAttribute="top" secondItem="N3r-mw-MvD" secondAttribute="top" constant="1" id="SJs-Dj-CXb"/>
+                            <constraint firstAttribute="trailing" secondItem="7fg-d8-fE8" secondAttribute="trailing" type="default" id="sU0-LK-sbO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g9F-U7-4Yd">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="hTy-1g-LYP">
+                            <rect key="frame" x="176" y="7" width="416" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="America"/>
+                                <segment title="Europa"/>
+                                <segment title="Africa"/>
+                                <segment title="Asia"/>
+                                <segment title="Oceania"/>
+                            </segments>
+                            <connections>
+                                <action selector="chooseContinent:" destination="uY8-pO-ylg" eventType="valueChanged" id="373-Ca-nhE"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="Choose" destination="hTy-1g-LYP" id="5l9-JT-Mkw"/>
+                        <outlet property="mapView" destination="7fg-d8-fE8" id="ad8-Id-P60"/>
+                        <segue destination="Zrf-Gy-ADS" kind="push" identifier="setLocal:" id="d9j-C3-OIC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e3D-BO-Mlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="405" y="-131"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f4N-h8-ssH">
+            <objects>
+                <navigationController id="ajf-yp-KJl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OYF-SI-kra">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uY8-pO-ylg" kind="relationship" relationship="rootViewController" id="ly0-SR-M4U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBA-Bt-edB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-555" y="-131"/>
+        </scene>
+        <!--Flag View Controller-->
+        <scene sceneID="2Fh-Ti-gqB">
+            <objects>
+                <viewController id="Zrf-Gy-ADS" customClass="FlagViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RnQ-sq-xvb">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FG-ER-8y8">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                                <subviews>
+                                    <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h44-vK-Vel">
+                                        <rect key="frame" x="576" y="9" width="181" height="165"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="165" type="user" id="aX3-0j-d5X"/>
+                                            <constraint firstAttribute="width" constant="181" type="user" id="t1U-DB-wCb"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="A4U-kq-jLQ" kind="embed" identifier="Embed Map of Country" id="lB1-KF-htR"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h44-vK-Vel" firstAttribute="top" secondItem="7FG-ER-8y8" secondAttribute="top" constant="9" id="Vmk-Ua-qlz"/>
+                                    <constraint firstAttribute="trailing" secondItem="h44-vK-Vel" secondAttribute="trailing" constant="11" id="XoT-nJ-ywk"/>
+                                    <constraint firstAttribute="bottom" secondItem="h44-vK-Vel" secondAttribute="bottom" constant="786" id="kQn-nV-Jfy"/>
+                                    <constraint firstItem="h44-vK-Vel" firstAttribute="leading" secondItem="7FG-ER-8y8" secondAttribute="leading" constant="576" id="r6Q-8b-gpL"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7FG-ER-8y8" firstAttribute="top" secondItem="RnQ-sq-xvb" secondAttribute="top" type="default" id="Azv-26-tFM"/>
+                            <constraint firstItem="7FG-ER-8y8" firstAttribute="bottom" secondItem="RnQ-sq-xvb" secondAttribute="bottom" type="default" id="J7F-qM-mFS"/>
+                            <constraint firstItem="7FG-ER-8y8" firstAttribute="leading" secondItem="RnQ-sq-xvb" secondAttribute="leading" type="default" id="akz-XA-iTL"/>
+                            <constraint firstItem="7FG-ER-8y8" firstAttribute="trailing" secondItem="RnQ-sq-xvb" secondAttribute="trailing" type="default" id="yOA-DX-91g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kgX-1N-WBg"/>
+                    <connections>
+                        <outlet property="scrollView" destination="7FG-ER-8y8" id="S6Z-a3-nMl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0O-gj-Kdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235" y="-131"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="AjR-Bz-sBo">
+            <objects>
+                <viewController id="A4U-kq-jLQ" customClass="MapViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nS1-DQ-OPx">
+                        <rect key="frame" x="0.0" y="0.0" width="181" height="165"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yya-1I-DD8">
+                                <rect key="frame" x="0.0" y="0.0" width="181" height="165"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yya-1I-DD8" firstAttribute="bottom" secondItem="nS1-DQ-OPx" secondAttribute="bottom" type="default" id="6de-Ec-F4D"/>
+                            <constraint firstItem="yya-1I-DD8" firstAttribute="trailing" secondItem="nS1-DQ-OPx" secondAttribute="trailing" type="default" id="KF6-oN-m4p"/>
+                            <constraint firstItem="yya-1I-DD8" firstAttribute="leading" secondItem="nS1-DQ-OPx" secondAttribute="leading" type="default" id="sib-ci-IdR"/>
+                            <constraint firstItem="yya-1I-DD8" firstAttribute="top" secondItem="nS1-DQ-OPx" secondAttribute="top" type="default" id="sku-rW-s4v"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="mapView" destination="yya-1I-DD8" id="LBf-Il-izC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57S-Iw-Wib" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="-671"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
