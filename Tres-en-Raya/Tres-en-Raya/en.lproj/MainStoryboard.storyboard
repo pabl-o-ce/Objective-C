@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fPQ-va-Bf5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--En Raya View Controller - Game-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="_EnRayaViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N1-jZ-BXb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="lOU-Nc-3EQ"/>
+                                    <constraint firstAttribute="height" constant="59" id="xKb-LN-cNi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="1">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="5If-mE-GTg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eb-TH-gv8">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="1JC-eN-qF3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="2">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="Sh5-ve-TkV"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-g2-uHX">
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Jogo do Galo" id="4bm-SV-tyk" colorLabel="IBBuiltInLabel-Red">
+                                        <barButtonItem key="leftBarButtonItem" title="Reset " id="j9g-nx-R3Y">
+                                            <connections>
+                                                <action selector="reset:" destination="2" id="8JH-Ox-4Xy"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ganados : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vx-Mk-cZE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="3bE-zS-6y0"/>
+                                    <constraint firstAttribute="height" constant="44" id="Reb-NX-e8K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Perdidos : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHN-7a-vvE">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="hRb-Bn-pEs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJl-qc-0ri">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="pbh-ff-8TS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZJ-Os-CiN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="59" id="rbw-0x-Gf5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="3">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="0SK-wg-DC4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7o-Rj-9ui">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="KWp-va-eWu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="4">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="x9N-b9-MI8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8JP-a0-VZ2">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="5">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="as2-VM-hQV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wM-xX-vKH">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="6">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="IQZ-LO-elt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7X-K2-ufP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="aY8-s7-lyX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="7">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="aGu-s2-x0U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldt-9U-s0k">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="8">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="dic-p3-25Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mhb-RS-VwH">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="selected" title="9">
+                                    <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="turnoJogador:" destination="2" eventType="touchUpInside" id="nRj-nc-bXT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Você ☤" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6j-Mf-Lbo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="1y6-L8-Icx"/>
+                                    <constraint firstAttribute="width" constant="103" id="6Jy-Bg-3Ml"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="IOS ⚛" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzF-e2-UG7">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="MQo-d6-HfX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="VS." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZE-Do-y0e">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="Hou-YK-IAt"/>
+                                    <constraint firstAttribute="height" constant="21" id="KUX-Cx-8NK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mhb-RS-VwH" firstAttribute="leading" secondItem="9wM-xX-vKH" secondAttribute="leading" type="default" id="1YT-in-9iG"/>
+                            <constraint firstItem="pJl-qc-0ri" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1n6-2R-J9g"/>
+                            <constraint firstAttribute="bottom" secondItem="pJl-qc-0ri" secondAttribute="bottom" constant="33" id="1r0-kQ-ZRI"/>
+                            <constraint firstItem="ZzF-e2-UG7" firstAttribute="baseline" secondItem="n6j-Mf-Lbo" secondAttribute="baseline" type="default" id="1u7-BK-98u"/>
+                            <constraint firstItem="9wM-xX-vKH" firstAttribute="bottom" secondItem="8JP-a0-VZ2" secondAttribute="bottom" type="default" id="4JU-QK-PIP"/>
+                            <constraint firstItem="9wM-xX-vKH" firstAttribute="trailing" secondItem="LZJ-Os-CiN" secondAttribute="trailing" type="default" id="4mo-os-wka"/>
+                            <constraint firstItem="V7o-Rj-9ui" firstAttribute="trailing" secondItem="9N1-jZ-BXb" secondAttribute="trailing" type="default" id="6Uj-Cj-TH5"/>
+                            <constraint firstItem="vHN-7a-vvE" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="6gU-K6-Ahu"/>
+                            <constraint firstItem="vHN-7a-vvE" firstAttribute="top" secondItem="4vx-Mk-cZE" secondAttribute="top" type="default" id="8TI-ER-J41"/>
+                            <constraint firstItem="nZE-Do-y0e" firstAttribute="centerX" secondItem="AR8-g2-uHX" secondAttribute="centerX" type="default" id="BGk-Hb-IUj"/>
+                            <constraint firstItem="Mhb-RS-VwH" firstAttribute="trailing" secondItem="9wM-xX-vKH" secondAttribute="trailing" type="default" id="IZs-tU-xOQ"/>
+                            <constraint firstItem="AR8-g2-uHX" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="KFR-dD-jiK"/>
+                            <constraint firstItem="n6j-Mf-Lbo" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="9" id="LTH-OP-fUO"/>
+                            <constraint firstItem="Ldt-9U-s0k" firstAttribute="top" secondItem="Mhb-RS-VwH" secondAttribute="top" type="default" id="MM6-ea-Lvi"/>
+                            <constraint firstItem="8JP-a0-VZ2" firstAttribute="trailing" secondItem="6eb-TH-gv8" secondAttribute="trailing" type="default" id="Mpn-Lx-3OO"/>
+                            <constraint firstItem="9wM-xX-vKH" firstAttribute="top" secondItem="8JP-a0-VZ2" secondAttribute="top" type="default" id="N8P-Vh-0bo"/>
+                            <constraint firstItem="vHN-7a-vvE" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="OtT-wK-iye"/>
+                            <constraint firstItem="n6j-Mf-Lbo" firstAttribute="trailing" secondItem="9N1-jZ-BXb" secondAttribute="trailing" type="default" id="PGC-Vf-1Ue"/>
+                            <constraint firstItem="T7X-K2-ufP" firstAttribute="leading" secondItem="V7o-Rj-9ui" secondAttribute="leading" type="default" id="RGi-80-5fP"/>
+                            <constraint firstAttribute="trailing" secondItem="pJl-qc-0ri" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="RgR-vu-yza"/>
+                            <constraint firstItem="V7o-Rj-9ui" firstAttribute="bottom" secondItem="8JP-a0-VZ2" secondAttribute="bottom" type="default" id="VcH-3I-Jh3"/>
+                            <constraint firstItem="9N1-jZ-BXb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="114" id="W2e-UQ-xOu"/>
+                            <constraint firstItem="6eb-TH-gv8" firstAttribute="top" secondItem="9N1-jZ-BXb" secondAttribute="top" type="default" id="WPl-jh-ooR"/>
+                            <constraint firstItem="Ldt-9U-s0k" firstAttribute="bottom" secondItem="T7X-K2-ufP" secondAttribute="bottom" type="default" id="XIZ-Gd-9Mj"/>
+                            <constraint firstAttribute="bottom" secondItem="T7X-K2-ufP" secondAttribute="bottom" constant="91" id="XlE-dS-0Fx"/>
+                            <constraint firstAttribute="trailing" secondItem="ZzF-e2-UG7" secondAttribute="trailing" constant="12" id="aG5-Rv-6Um"/>
+                            <constraint firstItem="n6j-Mf-Lbo" firstAttribute="top" secondItem="3" secondAttribute="top" constant="50" id="bft-gS-bbe"/>
+                            <constraint firstItem="nZE-Do-y0e" firstAttribute="centerX" secondItem="6eb-TH-gv8" secondAttribute="centerX" type="default" id="ciQ-zM-xQk"/>
+                            <constraint firstItem="V7o-Rj-9ui" firstAttribute="top" secondItem="3" secondAttribute="top" constant="188" id="d5n-Sm-bkW"/>
+                            <constraint firstItem="T7X-K2-ufP" firstAttribute="top" secondItem="Ldt-9U-s0k" secondAttribute="top" type="default" id="fd9-Et-cub"/>
+                            <constraint firstItem="Mhb-RS-VwH" firstAttribute="bottom" secondItem="Ldt-9U-s0k" secondAttribute="bottom" type="default" id="ibk-Aa-En4"/>
+                            <constraint firstItem="V7o-Rj-9ui" firstAttribute="leading" secondItem="9N1-jZ-BXb" secondAttribute="leading" type="default" id="jfb-og-DoR"/>
+                            <constraint firstItem="T7X-K2-ufP" firstAttribute="trailing" secondItem="V7o-Rj-9ui" secondAttribute="trailing" type="default" id="kpm-ke-VYz"/>
+                            <constraint firstItem="Ldt-9U-s0k" firstAttribute="leading" secondItem="8JP-a0-VZ2" secondAttribute="leading" type="default" id="lNZ-6Q-dPd"/>
+                            <constraint firstAttribute="trailing" secondItem="LZJ-Os-CiN" secondAttribute="trailing" constant="52" id="lxL-1r-Jar"/>
+                            <constraint firstItem="ZzF-e2-UG7" firstAttribute="top" secondItem="n6j-Mf-Lbo" secondAttribute="top" type="default" id="m8A-DL-IyW"/>
+                            <constraint firstItem="Ldt-9U-s0k" firstAttribute="trailing" secondItem="8JP-a0-VZ2" secondAttribute="trailing" type="default" id="mOf-R7-mB3"/>
+                            <constraint firstItem="nZE-Do-y0e" firstAttribute="bottom" secondItem="ZzF-e2-UG7" secondAttribute="bottom" type="default" id="mca-KG-dJ7"/>
+                            <constraint firstItem="AR8-g2-uHX" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="oA6-L2-von"/>
+                            <constraint firstItem="6eb-TH-gv8" firstAttribute="bottom" secondItem="9N1-jZ-BXb" secondAttribute="bottom" type="default" id="oCb-i1-yFw"/>
+                            <constraint firstItem="8JP-a0-VZ2" firstAttribute="leading" secondItem="6eb-TH-gv8" secondAttribute="leading" type="default" id="p17-eD-aXN"/>
+                            <constraint firstItem="n6j-Mf-Lbo" firstAttribute="leading" secondItem="4vx-Mk-cZE" secondAttribute="leading" type="default" id="qkA-xP-Huj"/>
+                            <constraint firstItem="V7o-Rj-9ui" firstAttribute="top" secondItem="8JP-a0-VZ2" secondAttribute="top" type="default" id="rNX-iE-0L0"/>
+                            <constraint firstItem="4vx-Mk-cZE" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="t99-nt-mQC"/>
+                            <constraint firstItem="AR8-g2-uHX" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="tlP-hl-Lpk"/>
+                            <constraint firstItem="9wM-xX-vKH" firstAttribute="leading" secondItem="LZJ-Os-CiN" secondAttribute="leading" type="default" id="vEw-FL-khh"/>
+                            <constraint firstItem="LZJ-Os-CiN" firstAttribute="top" secondItem="6eb-TH-gv8" secondAttribute="top" type="default" id="wCQ-gg-RwE"/>
+                            <constraint firstItem="LZJ-Os-CiN" firstAttribute="bottom" secondItem="6eb-TH-gv8" secondAttribute="bottom" type="default" id="x1I-qA-gIA"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Game" image="jogo.png" id="gSq-XW-x8g"/>
+                    <connections>
+                        <outlet property="contadorGanados" destination="4vx-Mk-cZE" id="tvY-AY-11h"/>
+                        <outlet property="contadorPerdidos" destination="vHN-7a-vvE" id="YRF-js-8Ah"/>
+                        <outlet property="ios" destination="ZzF-e2-UG7" id="9CN-AG-UIc"/>
+                        <outlet property="mensaje" destination="pJl-qc-0ri" id="IaL-u3-gny"/>
+                        <outlet property="player" destination="n6j-Mf-Lbo" id="DDT-rZ-6Kd"/>
+                        <outlet property="resetButton" destination="j9g-nx-R3Y" id="qgm-t9-g02"/>
+                        <outletCollection property="cuadros" destination="9N1-jZ-BXb" id="aeb-Jt-Rjd"/>
+                        <outletCollection property="cuadros" destination="6eb-TH-gv8" id="Q6L-OI-nN1"/>
+                        <outletCollection property="cuadros" destination="LZJ-Os-CiN" id="a8Q-86-Y4k"/>
+                        <outletCollection property="cuadros" destination="V7o-Rj-9ui" id="T00-jg-5tQ"/>
+                        <outletCollection property="cuadros" destination="8JP-a0-VZ2" id="SDJ-7j-1tc"/>
+                        <outletCollection property="cuadros" destination="9wM-xX-vKH" id="YPO-xX-e5L"/>
+                        <outletCollection property="cuadros" destination="T7X-K2-ufP" id="Jma-82-PjM"/>
+                        <outletCollection property="cuadros" destination="Ldt-9U-s0k" id="RAh-Zi-XKD"/>
+                        <outletCollection property="cuadros" destination="Mhb-RS-VwH" id="DHe-8G-AMy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="-384"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="4QS-vB-aeI">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="fPQ-va-Bf5" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="hak-GZ-j2b">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="bQr-M1-6Fj"/>
+                        <segue destination="h3L-29-Xtx" kind="relationship" relationship="viewControllers" id="H6r-WR-gEA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1w3-6r-yiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-236" y="-44"/>
+        </scene>
+        <!--Jogo Result View Controller - Result-->
+        <scene sceneID="4Vc-Nx-Q0X">
+            <objects>
+                <viewController id="h3L-29-Xtx" customClass="JogoResultViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QEj-lj-1rG" customClass="GameResultViewController">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="26S-Dk-ADT">
+                                <color key="tintColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Result" id="Igu-qf-fPe">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="rB4-YB-s7h">
+                                            <color key="tintColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="EraseUserData:" destination="h3L-29-Xtx" id="AhR-Ic-A6w"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dus-io-Vai">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="GRW-dW-63R"/>
+                                </constraints>
+                                <string key="text">Jogador ☤:
+Gano: tal fecha
+Perdio: tal fecha</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-dW-RRa">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="ziK-6u-6D1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Fecha">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortByDate" destination="h3L-29-Xtx" eventType="touchUpInside" id="heW-LH-Hut"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uq-Ni-v3G">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="ziS-bK-qyT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Duracion">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortByDuration" destination="h3L-29-Xtx" eventType="touchUpInside" id="jRM-V5-quO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcU-N6-HOP">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="Ywy-Yl-YTU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Ganados">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortByGanados" destination="h3L-29-Xtx" eventType="touchUpInside" id="gfy-G0-FT4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xF-m7-NUQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="ZXt-S7-Uyd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Perdidos">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sortByPerdidos" destination="h3L-29-Xtx" eventType="touchUpInside" id="bje-lv-Vln"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.25098040699958801" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5uq-Ni-v3G" firstAttribute="leading" secondItem="QEj-lj-1rG" secondAttribute="leading" constant="85" id="3sV-Vd-cWP"/>
+                            <constraint firstItem="Dus-io-Vai" firstAttribute="leading" secondItem="QEj-lj-1rG" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4DY-oR-ZrV"/>
+                            <constraint firstAttribute="trailing" secondItem="Dus-io-Vai" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6xG-7N-4IC"/>
+                            <constraint firstItem="Dus-io-Vai" firstAttribute="top" secondItem="QEj-lj-1rG" secondAttribute="top" constant="51" id="BXr-ma-DXk"/>
+                            <constraint firstItem="26S-Dk-ADT" firstAttribute="trailing" secondItem="QEj-lj-1rG" secondAttribute="trailing" type="default" id="IM1-YG-k2A"/>
+                            <constraint firstItem="tcU-N6-HOP" firstAttribute="baseline" secondItem="5uq-Ni-v3G" secondAttribute="baseline" type="default" id="MJ8-Re-ys2"/>
+                            <constraint firstItem="26S-Dk-ADT" firstAttribute="leading" secondItem="QEj-lj-1rG" secondAttribute="leading" type="default" id="QNS-cU-NJC"/>
+                            <constraint firstItem="1xF-m7-NUQ" firstAttribute="baseline" secondItem="tcU-N6-HOP" secondAttribute="baseline" type="default" id="VCQ-8D-TGl"/>
+                            <constraint firstItem="e8A-dW-RRa" firstAttribute="top" secondItem="Dus-io-Vai" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eQG-oR-s0I"/>
+                            <constraint firstItem="26S-Dk-ADT" firstAttribute="top" secondItem="QEj-lj-1rG" secondAttribute="top" constant="-1" id="fgL-el-r9r"/>
+                            <constraint firstAttribute="trailing" secondItem="tcU-N6-HOP" secondAttribute="trailing" constant="82" id="iUc-GC-gUE"/>
+                            <constraint firstAttribute="trailing" secondItem="1xF-m7-NUQ" secondAttribute="trailing" constant="2" id="mdb-bn-znB"/>
+                            <constraint firstItem="5uq-Ni-v3G" firstAttribute="baseline" secondItem="e8A-dW-RRa" secondAttribute="baseline" type="default" id="mpB-H7-urv"/>
+                            <constraint firstItem="e8A-dW-RRa" firstAttribute="leading" secondItem="QEj-lj-1rG" secondAttribute="leading" constant="5" id="rpN-fG-e8W"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Result" image="result.png" id="98Q-me-A9r"/>
+                    <connections>
+                        <outlet property="display" destination="Dus-io-Vai" id="l30-d5-PdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZq-H9-jKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295" y="267"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="jogo.png" width="30" height="30"/>
+        <image name="result.png" width="30" height="30"/>
+    </resources>
+    <classes>
+        <class className="JogoResultViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/JogoResultViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="EraseUserData:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="display" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="_EnRayaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/_EnRayaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="reset:" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="contadorGanados" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="contadorPerdidos" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ios" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mensaje" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="player" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resetButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outletCollection" name="cuadros" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
