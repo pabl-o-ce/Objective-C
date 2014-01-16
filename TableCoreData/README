@@ -1,0 +1,20 @@
+Project 6 : List Continents , Countries and see Banderas
+
+Individual Project
+
+Replicating shutterbug application with the list of continents , countries and flags.
+Three views : table view with List continents , with table view list of countries scrollview with image of flag.
+Download file BanderasMundo.zip
+Delivery Date : November 18 , 9 am .
+
+Using SplitView with TableView , list the continents , to select one of them , depliega the list of countries of the continent to a country Select Product , graphic displays of the flag of the country.
+You must load the list of continents and countries in a database . This should be done at program startup .
+In Ipad , when you deploy the image, a popover which allows displaying the name of the country appears .
+In Iphone, to display the image , use a button bar and use UIAlertView to display the name of the country
+
+1) (25 % ) Load Database should investigate and read the list of files from the directory name .
+2) ( 20 % ) List of Continents .
+3) (20 % ) List of Countries .
+4) (15 % ) Display flag.
+5) (10 % ) and Pin Display AlertView
+6) (10 % ) Final Draft Declaration topic
