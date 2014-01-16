@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="7pG-r8-I8f">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Nv5-5z-isE">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="7pG-r8-I8f" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0kh-kD-nDd">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PWW-yJ-WRF" kind="relationship" relationship="rootViewController" id="uaC-PQ-Tcx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8w-8x-v0y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="-357"/>
+        </scene>
+        <!--Banderas View Controller - Banderitas-->
+        <scene sceneID="fWh-6c-6sy">
+            <objects>
+                <viewController id="PWW-yJ-WRF" customClass="BanderasViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AFP-pg-ZJs">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Adivinados: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vws-qw-urS">
+                                <rect key="frame" x="0.0" y="0.0" width="178" height="59"/>
+                                <color key="backgroundColor" red="0.00051706363520000003" green="0.25" blue="0.00080223436489999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="178" id="AJi-Q0-p3I"/>
+                                    <constraint firstAttribute="height" constant="59" id="qLR-NG-Iw8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Intentos: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-td-YiO">
+                                <rect key="frame" x="177" y="0.0" width="143" height="31"/>
+                                <color key="backgroundColor" red="0.00049595899710000002" green="0.2397959184" blue="0.00076949010510000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ceD-br-Daq"/>
+                                    <constraint firstAttribute="width" constant="143" id="vog-FV-e58"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nombre del Pais" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uim-MH-qza">
+                                <rect key="frame" x="0.0" y="59" width="320" height="29"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="rbt-sY-0z0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-qo-Lcp">
+                                <rect key="frame" x="0.0" y="113" width="320" height="303"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303" id="Key-lN-XHe"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FyJ-po-NWO">
+                                    <size key="itemSize" width="141" height="86"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Bandera" id="7zs-Dk-BYh" customClass="BanderaCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="141" height="86"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="141" height="86"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-EC-N0W" customClass="BanderaView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="141" height="86"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Xe5-EC-N0W" firstAttribute="bottom" secondItem="7zs-Dk-BYh" secondAttribute="bottom" type="default" id="2JY-gC-usc"/>
+                                            <constraint firstItem="Xe5-EC-N0W" firstAttribute="leading" secondItem="7zs-Dk-BYh" secondAttribute="leading" type="default" id="FYA-ko-Mmu"/>
+                                            <constraint firstItem="Xe5-EC-N0W" firstAttribute="top" secondItem="7zs-Dk-BYh" secondAttribute="top" type="default" id="WSO-XX-93R"/>
+                                            <constraint firstItem="Xe5-EC-N0W" firstAttribute="trailing" secondItem="7zs-Dk-BYh" secondAttribute="trailing" type="default" id="omj-gs-VI6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="banderaView" destination="Xe5-EC-N0W" id="Osw-ru-roT"/>
+                                            <segue destination="gq5-8v-1sI" kind="push" identifier="Bandera" id="cWv-ei-5qT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="PWW-yJ-WRF" id="UB9-8u-buE"/>
+                                    <outlet property="delegate" destination="PWW-yJ-WRF" id="fFU-Hd-fAd"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orG-qg-3G0">
+                                <rect key="frame" x="177" y="30" width="143" height="29"/>
+                                <color key="backgroundColor" red="0.00042209276344947459" green="0.20408163265306123" blue="0.00065488519586341242" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="3B4-3h-me8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Reset:" destination="PWW-yJ-WRF" eventType="touchUpInside" id="vXO-25-fAQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0xM-td-YiO" firstAttribute="leading" secondItem="orG-qg-3G0" secondAttribute="leading" type="default" id="3m8-sd-CsZ"/>
+                            <constraint firstItem="uim-MH-qza" firstAttribute="top" secondItem="AFP-pg-ZJs" secondAttribute="top" constant="59" id="8rb-CF-BlT"/>
+                            <constraint firstItem="0xM-td-YiO" firstAttribute="top" secondItem="AFP-pg-ZJs" secondAttribute="top" type="default" id="DBk-m8-Y6T"/>
+                            <constraint firstItem="WBg-qo-Lcp" firstAttribute="bottom" secondItem="AFP-pg-ZJs" secondAttribute="bottom" type="default" id="Dr0-HA-r9V"/>
+                            <constraint firstItem="Vws-qw-urS" firstAttribute="leading" secondItem="AFP-pg-ZJs" secondAttribute="leading" type="default" id="G87-1s-Ivj"/>
+                            <constraint firstItem="orG-qg-3G0" firstAttribute="trailing" secondItem="AFP-pg-ZJs" secondAttribute="trailing" type="default" id="II3-rV-0fO"/>
+                            <constraint firstItem="Vws-qw-urS" firstAttribute="top" secondItem="AFP-pg-ZJs" secondAttribute="top" type="default" id="U0c-jx-Jfn"/>
+                            <constraint firstItem="uim-MH-qza" firstAttribute="trailing" secondItem="AFP-pg-ZJs" secondAttribute="trailing" type="default" id="at8-E0-03X"/>
+                            <constraint firstItem="orG-qg-3G0" firstAttribute="top" secondItem="AFP-pg-ZJs" secondAttribute="top" constant="30" id="goL-d4-c8P"/>
+                            <constraint firstItem="WBg-qo-Lcp" firstAttribute="leading" secondItem="AFP-pg-ZJs" secondAttribute="leading" type="default" id="hc6-FG-AVD"/>
+                            <constraint firstItem="WBg-qo-Lcp" firstAttribute="trailing" secondItem="AFP-pg-ZJs" secondAttribute="trailing" type="default" id="iSc-aD-ZF2"/>
+                            <constraint firstItem="0xM-td-YiO" firstAttribute="trailing" secondItem="AFP-pg-ZJs" secondAttribute="trailing" type="default" id="uNc-4Y-K8C"/>
+                            <constraint firstItem="uim-MH-qza" firstAttribute="leading" secondItem="AFP-pg-ZJs" secondAttribute="leading" type="default" id="xuI-0S-65S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Banderitas" id="p8F-5l-cjI"/>
+                    <connections>
+                        <outlet property="adivinados" destination="Vws-qw-urS" id="raD-7b-g2d"/>
+                        <outlet property="banderitasCollectionView" destination="WBg-qo-Lcp" id="HkY-T3-M52"/>
+                        <outlet property="nomPais" destination="uim-MH-qza" id="e6R-MA-iqF"/>
+                        <outlet property="numIntentos" destination="0xM-td-YiO" id="rho-g6-SxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpG-B8-moS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="-364"/>
+        </scene>
+        <!--Resultado Image View Controller - Estrellita-->
+        <scene sceneID="r7h-Zu-vG8">
+            <objects>
+                <viewController id="gq5-8v-1sI" customClass="ResultadoImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HHH-MB-7cx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jg-mh-04E" customClass="Imagen">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8jg-mh-04E" firstAttribute="bottom" secondItem="HHH-MB-7cx" secondAttribute="bottom" type="default" id="4H7-hZ-8tf"/>
+                            <constraint firstItem="8jg-mh-04E" firstAttribute="leading" secondItem="HHH-MB-7cx" secondAttribute="leading" type="default" id="5HK-gd-s54"/>
+                            <constraint firstItem="8jg-mh-04E" firstAttribute="top" secondItem="HHH-MB-7cx" secondAttribute="top" type="default" id="Sh4-Vm-aJu"/>
+                            <constraint firstItem="8jg-mh-04E" firstAttribute="trailing" secondItem="HHH-MB-7cx" secondAttribute="trailing" type="default" id="o63-XJ-d9c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Estrellita" id="PVO-Im-Mlh"/>
+                    <connections>
+                        <outlet property="img" destination="8jg-mh-04E" id="uBR-2B-a0a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rv3-jT-PCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="-364"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
