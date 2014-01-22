@@ -5,7 +5,7 @@ Replicating shutterbug application with the list of flags and images of Project 
 Delivery Date: November 4, 9 am. 
 It should work on Iphone and Ipad 
 
-Using SplitView, list the flags to select one of them, depliega the graph of it. 
+Using SplitView, list the flags to select one of them, display the graph of it. 
 In Ipad, when you deploy the image, a popover which allows displaying the name of the country appears. 
 In Iphone, to display the image, use a button bar and use UIAlertView to display the name of the country 
 Delete a country from the list. 
