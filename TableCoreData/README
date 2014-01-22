@@ -7,7 +7,7 @@ Three views : table view with List continents , with table view list of countrie
 Download file BanderasMundo.zip
 Delivery Date : November 18 , 9 am .
 
-Using SplitView with TableView , list the continents , to select one of them , depliega the list of countries of the continent to a country Select Product , graphic displays of the flag of the country.
+Using SplitView with TableView , list the continents , to select one of them , display the list of countries of the continent to a country Select Product , graphic displays of the flag of the country.
 You must load the list of continents and countries in a database . This should be done at program startup .
 In Ipad , when you deploy the image, a popover which allows displaying the name of the country appears .
 In Iphone, to display the image , use a button bar and use UIAlertView to display the name of the country
