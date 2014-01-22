@@ -9,7 +9,7 @@ Replicating Photomania application with world map of countries, their pins and f
 Download file BanderasMundo.zip
 Delivery Date : December 2 , 9 am .
 
-Using MapView , displays world map with a pin in each country , pressing the pin deplegamos its flag, with box, lodging enjoys country.
+Using MapView , displays world map with a pin in each country , pressing the pin display its flag, with box, lodging enjoys country.
 
 You must load the list of countries and pins in a database . This should be done at program startup .
 In Ipad , when you deploy the image, a popover which allows displaying the name of the country and its coordinates appears .
